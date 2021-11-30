@@ -2,7 +2,7 @@ def email_code(z):
     import smtplib
     from email.message import EmailMessage
     msg=EmailMessage()
-    msg['Subject']='fraud alert'
+    msg['Subject']='Fraud alert'
     msg['From']='team'
     msg['To']=z
     msg.set_content("Your account is being accessed by some one")
@@ -12,6 +12,6 @@ def email_code(z):
         file_name=f.name
         msg.add_attachment(file_data,maintype="application",subtype=file_type,filename=file_name)
     server=smtplib.SMTP_SSL("smtp.gmail.com",465)
-    server.login("bpvvproject2@gmail.com","Project1@bpvv")
+    server.login("createnewmail@gmail.com","mail_password")
     server.send_message(msg)
     server.quit()
